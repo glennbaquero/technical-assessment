@@ -9,6 +9,9 @@ class TodoUpdateRequest extends FormRequest
 {
     use TodoValidationRules;
 
+    /**
+     * @return array<string, array<int, string>>
+     */
     public function rules(): array
     {
         return [
