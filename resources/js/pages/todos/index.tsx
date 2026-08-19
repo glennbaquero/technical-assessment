@@ -74,7 +74,8 @@ export default function TodosIndex({ todos }: { todos: Todo[] }) {
                         className="text-sm text-muted-foreground"
                         data-test="todos-empty-state"
                     >
-                        You don't have any todos yet. Add one above to get started.
+                        You don't have any todos yet. Add one above to get
+                        started.
                     </p>
                 ) : (
                     <ul className="space-y-3" data-test="todos-list">
