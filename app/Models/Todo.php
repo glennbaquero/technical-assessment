@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Enums\TodoStatus;
+use Database\Factories\TodoFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
@@ -22,6 +24,9 @@ use Illuminate\Support\Carbon;
 #[Fillable(['title', 'description', 'status', 'due_date'])]
 class Todo extends Model
 {
+    /** @use HasFactory<TodoFactory> */
+    use HasFactory;
+
     protected function casts(): array
     {
         return [
